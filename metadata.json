@@ -1,0 +1,12 @@
+{
+  "name": "finteam_steps",
+  "version": "0.1.0",
+  "author": "Finance Application Team",
+  "summary": "Finance app team's own patch-workflow steps (quiesce, smoke test, resume).",
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "operatingsystem_support": [
+    { "operatingsystem": "RedHat", "operatingsystemrelease": ["8", "9"] },
+    { "operatingsystem": "Ubuntu", "operatingsystemrelease": ["22.04"] }
+  ]
+}

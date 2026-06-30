@@ -1,0 +1,8 @@
+{
+  "description": "Gracefully stop the finance application and pause its scheduled jobs before patching.",
+  "parameters": {
+    "service": { "description": "systemd service name to stop.", "type": "Optional[String]" },
+    "drain_seconds": { "description": "Time to let in-flight transactions finish.", "type": "Optional[Integer]" }
+  },
+  "input_method": "environment"
+}

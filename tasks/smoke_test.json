@@ -1,0 +1,8 @@
+{
+  "description": "Run the finance app smoke test suite; exits non-zero if any check fails.",
+  "parameters": {
+    "endpoint": { "description": "Base URL of the app to test.", "type": "Optional[String]" },
+    "suite": { "description": "Named smoke-test suite to run (e.g. 'core', 'full').", "type": "Optional[String]" }
+  },
+  "input_method": "environment"
+}

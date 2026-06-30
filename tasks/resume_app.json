@@ -1,0 +1,7 @@
+{
+  "description": "Restart the finance application and resume its scheduled jobs after patching.",
+  "parameters": {
+    "service": { "description": "systemd service name to start.", "type": "Optional[String]" }
+  },
+  "input_method": "environment"
+}

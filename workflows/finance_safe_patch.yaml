@@ -1,0 +1,14 @@
+# Finance team's predefined workflow, mixing platform-owned (psm_steps) and
+# app-owned (finteam_steps) steps in one rolling rollout.
+schema_version: 1
+name: "Finance safe patch"
+description: "Platform pre-patch, quiesce the app, patch, smoke-test gate, resume, rejoin."
+strategy: rolling
+halt_on_failure: true
+steps:
+  - { phase: pre,      type: plan, name: "psm_steps::pre_patch" }
+  - { phase: pre,      type: task, name: "finteam_steps::quiesce_app", params: { drain_seconds: 30 } }
+  - { phase: patch }
+  - { phase: validate, type: plan, name: "finteam_steps::validate", params: { suite: "core" } }
+  - { phase: post,     type: task, name: "finteam_steps::resume_app" }
+  - { phase: post,     type: plan, name: "psm_steps::post_patch" }
