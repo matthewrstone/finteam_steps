@@ -4,6 +4,9 @@
   "author": "Finance Application Team",
   "summary": "Finance app team's own patch-workflow steps (quiesce, smoke test, resume).",
   "license": "Apache-2.0",
+  "source": "https://github.com/your-org/finteam_steps",
+  "project_page": "https://github.com/your-org/finteam_steps",
+  "issues_url": "https://github.com/your-org/finteam_steps/issues",
   "dependencies": [],
   "operatingsystem_support": [
     { "operatingsystem": "RedHat", "operatingsystemrelease": ["8", "9"] },
